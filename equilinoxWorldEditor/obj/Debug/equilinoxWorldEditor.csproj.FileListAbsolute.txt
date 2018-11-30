@@ -1,0 +1,14 @@
+C:\Users\Billy\source\repos\equilinoxWorldEditor\equilinoxWorldEditor\bin\Debug\equilinoxWorldEditor.exe.config
+C:\Users\Billy\source\repos\equilinoxWorldEditor\equilinoxWorldEditor\bin\Debug\equilinoxWorldEditor.exe
+C:\Users\Billy\source\repos\equilinoxWorldEditor\equilinoxWorldEditor\bin\Debug\equilinoxWorldEditor.pdb
+C:\Users\Billy\source\repos\equilinoxWorldEditor\equilinoxWorldEditor\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Billy\source\repos\equilinoxWorldEditor\equilinoxWorldEditor\bin\Debug\Newtonsoft.Json.pdb
+C:\Users\Billy\source\repos\equilinoxWorldEditor\equilinoxWorldEditor\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Billy\source\repos\equilinoxWorldEditor\equilinoxWorldEditor\obj\Debug\equilinoxWorldEditor.csprojAssemblyReference.cache
+C:\Users\Billy\source\repos\equilinoxWorldEditor\equilinoxWorldEditor\obj\Debug\equilinoxWorldEditor.Form1.resources
+C:\Users\Billy\source\repos\equilinoxWorldEditor\equilinoxWorldEditor\obj\Debug\equilinoxWorldEditor.Properties.Resources.resources
+C:\Users\Billy\source\repos\equilinoxWorldEditor\equilinoxWorldEditor\obj\Debug\equilinoxWorldEditor.csproj.GenerateResource.cache
+C:\Users\Billy\source\repos\equilinoxWorldEditor\equilinoxWorldEditor\obj\Debug\equilinoxWorldEditor.csproj.CoreCompileInputs.cache
+C:\Users\Billy\source\repos\equilinoxWorldEditor\equilinoxWorldEditor\obj\Debug\equilinoxWorldEditor.csproj.CopyComplete
+C:\Users\Billy\source\repos\equilinoxWorldEditor\equilinoxWorldEditor\obj\Debug\equilinoxWorldEditor.exe
+C:\Users\Billy\source\repos\equilinoxWorldEditor\equilinoxWorldEditor\obj\Debug\equilinoxWorldEditor.pdb
