@@ -35,8 +35,8 @@
             this.label8 = new System.Windows.Forms.Label();
             this.isDeadValue = new System.Windows.Forms.CheckBox();
             this.idValue = new System.Windows.Forms.NumericUpDown();
-            this.blueprintValue = new System.Windows.Forms.NumericUpDown();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.blueprintIDValue = new System.Windows.Forms.NumericUpDown();
+            this.isStaticValue = new System.Windows.Forms.CheckBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -70,7 +70,7 @@
             this.tabPage1.SuspendLayout();
             this.propPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.idValue)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.blueprintValue)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.blueprintIDValue)).BeginInit();
             this.tabPage2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.timeValue)).BeginInit();
@@ -112,8 +112,8 @@
             this.propPanel.Controls.Add(this.label8);
             this.propPanel.Controls.Add(this.isDeadValue);
             this.propPanel.Controls.Add(this.idValue);
-            this.propPanel.Controls.Add(this.blueprintValue);
-            this.propPanel.Controls.Add(this.checkBox1);
+            this.propPanel.Controls.Add(this.blueprintIDValue);
+            this.propPanel.Controls.Add(this.isStaticValue);
             this.propPanel.Controls.Add(this.label6);
             this.propPanel.Controls.Add(this.label7);
             this.propPanel.Location = new System.Drawing.Point(179, 29);
@@ -157,7 +157,7 @@
             // 
             this.idValue.Location = new System.Drawing.Point(38, 9);
             this.idValue.Maximum = new decimal(new int[] {
-            99999,
+            99999999,
             0,
             0,
             0});
@@ -165,26 +165,26 @@
             this.idValue.Size = new System.Drawing.Size(73, 20);
             this.idValue.TabIndex = 6;
             // 
-            // blueprintValue
+            // blueprintIDValue
             // 
-            this.blueprintValue.Location = new System.Drawing.Point(91, 35);
-            this.blueprintValue.Maximum = new decimal(new int[] {
+            this.blueprintIDValue.Location = new System.Drawing.Point(91, 35);
+            this.blueprintIDValue.Maximum = new decimal(new int[] {
             99999,
             0,
             0,
             0});
-            this.blueprintValue.Name = "blueprintValue";
-            this.blueprintValue.Size = new System.Drawing.Size(73, 20);
-            this.blueprintValue.TabIndex = 2;
+            this.blueprintIDValue.Name = "blueprintIDValue";
+            this.blueprintIDValue.Size = new System.Drawing.Size(73, 20);
+            this.blueprintIDValue.TabIndex = 2;
             // 
-            // checkBox1
+            // isStaticValue
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(66, 87);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(15, 14);
-            this.checkBox1.TabIndex = 5;
-            this.checkBox1.UseVisualStyleBackColor = true;
+            this.isStaticValue.AutoSize = true;
+            this.isStaticValue.Location = new System.Drawing.Point(66, 87);
+            this.isStaticValue.Name = "isStaticValue";
+            this.isStaticValue.Size = new System.Drawing.Size(15, 14);
+            this.isStaticValue.TabIndex = 5;
+            this.isStaticValue.UseVisualStyleBackColor = true;
             // 
             // label6
             // 
@@ -494,7 +494,7 @@
             this.propPanel.ResumeLayout(false);
             this.propPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.idValue)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.blueprintValue)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.blueprintIDValue)).EndInit();
             this.tabPage2.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
@@ -531,8 +531,8 @@
         private System.Windows.Forms.CheckBox isDeadValue;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.NumericUpDown blueprintValue;
-        private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.NumericUpDown blueprintIDValue;
+        private System.Windows.Forms.CheckBox isStaticValue;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.NumericUpDown idValue;

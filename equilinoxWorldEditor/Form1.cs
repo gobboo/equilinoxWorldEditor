@@ -69,22 +69,23 @@ namespace equilinoxWorldEditor
                         
                         foreach (var item in jarray.entities)
                         {
-                            listBox1.Items.Add(item.id.ToString());
+                            if(item.id != 0)
+                                listBox1.Items.Add(item.blueprintName + ": " + item.id);
+
+                            listBox1.Sorted = true;
                         }
 
 
 
                         foreach (JProperty property in jarray)
                         {
-
-                            Console.WriteLine("Searching for : " + property.Name + "Value");
+                            //Search for control with the same name as the Key + Value
                             Control[] control = groupBox1.Controls.Find(property.Name+"Value", false);
-                            //Console.WriteLine(property.Name + "Value");
                             
                             if(control.Length > 0)
                             {
+                                //Set control text to World Key Value
                                 control[0].Text = property.Value.ToString();
-                               // Console.WriteLine(control.Name);
 
                             }
 
@@ -92,16 +93,10 @@ namespace equilinoxWorldEditor
                         }
 
 
-                        // dpValue.Value = jarray.dp;
-                        // dpPerMinValue.Value = jarray.dpPerMin;
-
-                        //World Properties
-
                     }
                 }
             }
 
-            //dynamic array = parseJson.getJson(filePath);
 
             
 
@@ -111,6 +106,7 @@ namespace equilinoxWorldEditor
 
         private void saveBtn_Click(object sender, EventArgs e)
         {
+            //Open DialogBox
             SaveFileDialog saveFileDialog1 = new SaveFileDialog();
 
             saveFileDialog1.Filter = "JSON files|*.json";
@@ -118,6 +114,7 @@ namespace equilinoxWorldEditor
 
             if (saveFileDialog1.ShowDialog() == DialogResult.OK)
             {
+                //Write all of the serialized json data into a new file
                 File.WriteAllText(saveFileDialog1.FileName, JsonConvert.SerializeObject(jarray));
             }
 
@@ -128,29 +125,33 @@ namespace equilinoxWorldEditor
         {
             propPanel.Visible = true;
 
-            for(int i = 0; i < ((ICollection)jarray.entities).Count; i++)
+            var itemName = listBox1.GetItemText(listBox1.SelectedItem);
+
+            for (int i = 0; i < ((ICollection)jarray.entities).Count; i++)
             {
-                if(jarray.entities[i].id == listBox1.GetItemText(listBox1.SelectedItem))
+                //Check if the current loops blueprintName is the same as the selected one 
+                if (jarray.entities[i].blueprintName+": "+ jarray.entities[i].id == itemName)
                 {
-                    //idValue.Value = jarray.entities[i].id;
-                    //blueprintValue.Value = jarray.entities[i].blueprintID;
-                    //isDeadValue.Checked = jarray.entities[i].isDead;
-
-
-                    foreach (JProperty property in jarray)
+                    //Loop through all of the Properites in the entities object (For Key and Key Value)
+                    foreach (JProperty property in jarray.entities[i])
                     {
-
-                        Console.WriteLine("Searching for : " + property.Name + "Value");
-                        Control[] control = panel1.Controls.Find(property.Name + "Value", false);
-                        //Console.WriteLine(property.Name + "Value");
-
+                        //Look for the control that is associated with the current selected entitys values
+                        Control[] control = propPanel.Controls.Find(property.Name + "Value", false);
                         if (control.Length > 0)
                         {
-                            control[0].Text = property.Value.ToString();
-                            // Console.WriteLine(control.Name);
+                            //Check if control is a CheckBox
+                            if (control[0] is CheckBox)
+                            {
+                                //If so change Checked value since CheckBox check can't be change via text
+                                ((CheckBox)control[0]).Checked = (bool)property.Value;
+                            }
+                            else
+                            {
+                                //Set Input to be Entity Key Value
+                                control[0].Text = property.Value.ToString();
+                            }
 
                         }
-
 
                     }
                     break;
